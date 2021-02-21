@@ -4,7 +4,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-function App() {
+const App = () => {
 
   React.useLayoutEffect(() => {  
 
@@ -17,47 +17,32 @@ function App() {
         pin: true,
         markers: true,
         id: "cal-pin"
-      }});
+      }})
+      //  .to(".CALENDAR", {x: -100, duration: 1})
+      //  .to(".CALENDAR", {scale: 1.2, duration: 1})
   
 
     gsap.to(".HERO-HEADING", {y: "100vh", scale: 1.2, opacity: 0, 
       scrollTrigger: {
-                trigger: ".SECTION-1",
-                scrub: true,
-                start: "top top",
-                end: "50% 400",
-                markers: true,
-                id: "heroTL", 
-                toggleActions: "restart complete reverse none",
-            }})
-
-    let pinCalAnim = gsap.from(".CALENDAR", {x: -100, 
-      scrollTrigger:{
         trigger: ".SECTION-1",
         scrub: true,
-        start: "bottom bottom",
-        end: "+=200",
-        pin: true,
+        start: "top top",
+        end: "50% 400",
         markers: true,
-        id: "cal-zoom"
-      }, duration: 1})
-
-    let zoomCalAnim = gsap.to(".CALENDAR", {scale: 1.3, 
-      scrollTrigger:{
-        trigger: ".SECTION-1",
-        scrub: true,
-        start: "bottom bottom",
-        end: "+=200",
-        pin: true,
-        markers: true,
-        id: "cal-zoom"
+        id: "heroTL", 
+        toggleActions: "restart complete reverse none",
       }})
 
-      calTL.add(pinCalAnim, zoomCalAnim);
+    let calMoveXAnim = gsap.to(".CALENDAR", {x: -100, duration: 1});
+
+    let calZoomAnim = gsap.to(".CALENDAR", {scale: 1.2})
+
+    calTL.add(calMoveXAnim, "+=0");
+    calTL.add(calZoomAnim, "+=0");
 
 
 
-    });
+  });
 
   return (
     <div>
