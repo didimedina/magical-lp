@@ -13,13 +13,11 @@ const App = () => {
         trigger: ".SECTION-1",
         scrub: true,
         start: "bottom bottom",
-        end: "+=100%",
+        end: "+=200%",
         pin: true,
         markers: true,
         id: "cal-pin"
       }})
-      //  .to(".CALENDAR", {x: -100, duration: 1})
-      //  .to(".CALENDAR", {scale: 1.2, duration: 1})
   
 
     gsap.to(".HERO-HEADING", {y: "100vh", scale: 1.2, opacity: 0, 
@@ -33,12 +31,12 @@ const App = () => {
         toggleActions: "restart complete reverse none",
       }})
 
-    let calMoveXAnim = gsap.to(".CALENDAR", {x: -100, duration: 1});
-
-    let calZoomAnim = gsap.to(".CALENDAR", {scale: 1.2})
-
-    calTL.add(calMoveXAnim, "+=0");
+    let calPinPause = gsap.to({}, {duration: 1});
+    let calZoomAnim = gsap.to(".CALENDAR", {scale: 2, duration: 1})
+    calTL.add(calPinPause, "+=0");
     calTL.add(calZoomAnim, "+=0");
+    calTL.add(calPinPause, "+=0");
+
 
 
 
@@ -46,7 +44,7 @@ const App = () => {
 
   return (
     <div>
-      <div className="SECTION-1 relative w-100vw h-200vh bg-gray-200 flex flex-col items-center">
+      <div className="SECTION-1 relative overflow-hidden w-100vw h-200vh bg-gray-200 flex flex-col items-center">
         <div className="HERO-HEADING bg-red-200 text-6xl">Heading</div>
         <div className="CALENDAR bg-gray-300 absolute bottom-0 w-full h-80vh justify-self-end text-6xl">Calendar</div>
       </div>
