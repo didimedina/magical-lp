@@ -15,3 +15,7 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .container {
+  @apply max-w-2xl
+} */

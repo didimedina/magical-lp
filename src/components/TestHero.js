@@ -4,7 +4,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-const App = () => {
+const TestHero = () => {
 
   React.useLayoutEffect(() => {  
 
@@ -59,4 +59,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default TestHero;
