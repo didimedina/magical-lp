@@ -8,6 +8,8 @@ const LadningPage = () => {
     
     React.useLayoutEffect(() => {  
 
+        // let masterLT = gsap.timeline()
+
         gsap.timeline({
         scrollTrigger: {
             trigger: ".HERO-SECTION",
@@ -34,13 +36,21 @@ const LadningPage = () => {
         .to(".GAP-STEP-1", {y: -25, opacity: 0, scale: 0.4, duration: 0.5}, ">+=1")  // hide first then hide
         .fromTo(".GAP-STEP-2", {y: 50, opacity: 0, scale: 0.8}, {y: 0, opacity: 1, scale: 1, duration: 1}, "<") //show second message
         .to({}, {duration: 2}, ">")
+
+        gsap.timeline({ 
+        scrollTrigger: {
+            trigger: ".COMP-SECTION",
+            scrub: 1,
+            start: "top +=120%",
+            end: "+=50%",
+            markers: true,
+            id: "hero-to-comp-pin",
+        }})
         .to(".GAP-STEP-2", {transformOrigin: "bottom", scale: 30, duration: 1}, ">") // hold second message then zoom
         .to(".GAP-STEP-2", {y: "120px", duration: 0.5}, "<")
         .to([".GAP-STEP-TITLE-2", ".GAP-STEP-SUB-TITLE-2"], {opacity: 0, duration: 0.25}, "<")
-        // .to({}, {duration: 1}) // pause at the end
 
-
-        gsap.timeline({
+        gsap.timeline({ 
         scrollTrigger: {
             trigger: ".COMP-SECTION",
             scrub: 1,
@@ -48,8 +58,15 @@ const LadningPage = () => {
             end: "+=200%",
             pin: true,
             markers: true,
-            id: "comp-pin"
+            id: "comp-pin",
         }})
+        .set([".CAL-BROKEN-HEADING-2", ".COMP-LOGOS-CONTAINER"], {visibility: "hidden"})
+        .from(".CAL-BROKEN-HEADING-1", {y: "+=20vh", duration: 1})
+        .to(".CAL-BROKEN-HEADING-1", {y: "-=50px", scale: 0.8, duration: 0.5, opacity: 0})
+        .set([".CAL-BROKEN-HEADING-2", ".COMP-LOGOS-CONTAINER"], {visibility: "visible"}, "<")
+        .from([".CAL-BROKEN-HEADING-2", ".COMP-LOGOS-CONTAINER"], {scale: 0.8, y: "+=20vh", opacity: 0, duration: 1}, "<")
+        .to({}, {duration: 1})
+
 
     });
 
@@ -139,12 +156,12 @@ const LadningPage = () => {
 
             <div className="GAP-STEPS-CONTAINER absolute grid grid-col-1 grid-row-1 justify-center items-center invisible h-auto z-40 w-full bottom-0">
                 
-                <div className="GAP-STEP-1 relative z-10 col-start-1 -col-end-1 row-start-1 -row-end-1 h-20 my-16 w-auto px-10 flex flex-col justify-center items-center justify-items-stretch bg-gray-900 shadow-2xl rounded-md">
+                <div className="GAP-STEP-1 relative z-10 col-start-1 -col-end-1 row-start-1 -row-end-1 h-20 my-16 w-auto px-10 flex flex-col justify-center items-center justify-items-stretch bg-black shadow-2xl rounded-md">
                     <div className="GAP-STEP-TITLE text-2xl text-white">Downtime?!</div>
                     <div className="GAP-STEP-SUB-TITLE text-lg text-gray-500">1-1:15pm</div>
                 </div>
                 
-                <div className="GAP-STEP-2 relative z-20 col-start-1 -col-end-1 row-start-1 -row-end-1 h-20 my-16 w-auto px-10 flex flex-col justify-center items-center justify-items-stretch bg-gray-900 shadow-2xl rounded-md">
+                <div className="GAP-STEP-2 relative z-20 col-start-1 -col-end-1 row-start-1 -row-end-1 h-20 my-16 w-auto px-10 flex flex-col justify-center items-center justify-items-stretch bg-black shadow-2xl rounded-md">
                     <div className="GAP-STEP-TITLE-2 text-2xl text-white">Bathroom break?!</div>
                     <div className="GAP-STEP-SUB-TITLE-2 text-lg text-gray-500">1:25-1:30pm</div>
                 </div>
@@ -152,11 +169,11 @@ const LadningPage = () => {
             </div>
 
         </div>
-        <div className="COMP-SECTION h-100vh flex flex-col items-center w-full bg-gray-900">
+        <div className="COMP-SECTION h-100vh flex flex-col items-center w-full bg-black">
             <div className="COMP-CONTAINER max-w-7xl w-10/12 h-full flex flex-col justify-center items-center">
                 <div className="COMP-HEADING-WRAPPER relative w-full h-36 flex justify-center items-center">
-                    <div className="CAL-BROKEN-HEADING absolute top-0 text-8xl text-white">Calendar is broken.</div>
-                    <div className="CAL-BROKEN-HEADING absolute top-0 text-8xl text-white">...many have tried to fix it.</div>
+                    <div className="CAL-BROKEN-HEADING-1 absolute top-0 text-6xl text-center text-white">Calendar is broken.</div>
+                    <div className="CAL-BROKEN-HEADING-2 absolute top-0 text-6xl text-center text-white">...many have tried to fix it.</div>
                 </div>
                 <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-3 grid-rows-3 gap-8">
                     <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
@@ -168,7 +185,14 @@ const LadningPage = () => {
                 </div>
             </div>
         </div>
-        <div className="FOOTER-SECTION h-100vh w-full bg-gray-200">Footer Section</div>
+        <div className="PROD-SECTION flex flex-col items-center w-full bg-gray-100">
+            <div className="PROD-HEADING-CONTAINER mt-36 w-10/12 max-w-3xl">
+                <div className="PROD-HEADING text-6xl text-center text-black">Magical is here to fix it.</div>
+                <div className="PROD-SUB-HEADING text-3xl mt-4 text-center text-black">A new calendar, reimagined from the ground up, to help busy people take back control of their time.</div>
+            </div>
+            <div className="PROD-IMG max-w-7xl w-full h-60vh  mx-auto bg-bottom bg-contain bg-no-repeat bg-product-img-lg"></div>
+        </div>
+        <div className="FOOTER-SECTION flex flex-col items-center h-80vh w-full bg-white"></div>
 
     </div>
   );
