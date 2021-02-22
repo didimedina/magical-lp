@@ -13,7 +13,7 @@ const LadningPage = () => {
             trigger: ".HERO-SECTION",
             scrub: 1,
             start: "top top",
-            end: "+=400%",
+            end: "+=400% bottom",
             pin: true,
             markers: true,
             id: "hero-pin"
@@ -33,7 +33,7 @@ const LadningPage = () => {
         .fromTo(".GAP-STEP-1", {y: 50, opacity: 0, scale: 0.8}, {y: 0, opacity: 1, scale: 1, duration: 1}, "<") // show first message
         .to(".GAP-STEP-1", {y: -25, opacity: 0, scale: 0.4, duration: 0.5}, ">+=1")  // hide first then hide
         .fromTo(".GAP-STEP-2", {y: 50, opacity: 0, scale: 0.8}, {y: 0, opacity: 1, scale: 1, duration: 1}, "<") //show second message
-        .to({}, {duration: 1}, ">")
+        .to({}, {duration: 2}, ">")
         .to(".GAP-STEP-2", {transformOrigin: "bottom", scale: 30, duration: 1}, ">") // hold second message then zoom
         .to(".GAP-STEP-2", {y: "120px", duration: 0.5}, "<")
         .to([".GAP-STEP-TITLE-2", ".GAP-STEP-SUB-TITLE-2"], {opacity: 0, duration: 0.25}, "<")
@@ -152,8 +152,21 @@ const LadningPage = () => {
             </div>
 
         </div>
-        <div className="COMP-SECTION relative h-100vh flex flex-col items-center w-full bg-gray-900">
-            <div className="CAL-BROKEN-HEADING text-8xl text-white">Calendar is broken.</div>
+        <div className="COMP-SECTION h-100vh flex flex-col items-center w-full bg-gray-900">
+            <div className="COMP-CONTAINER max-w-7xl w-10/12 h-full flex flex-col justify-center items-center">
+                <div className="COMP-HEADING-WRAPPER relative w-full h-36 flex justify-center items-center">
+                    <div className="CAL-BROKEN-HEADING absolute top-0 text-8xl text-white">Calendar is broken.</div>
+                    <div className="CAL-BROKEN-HEADING absolute top-0 text-8xl text-white">...many have tried to fix it.</div>
+                </div>
+                <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-3 grid-rows-3 gap-8">
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                    <div className="LOGO-WRAPPER border-2 rounded-lg border-gray-700 h-32"></div>
+                </div>
+            </div>
         </div>
         <div className="FOOTER-SECTION h-100vh w-full bg-gray-200">Footer Section</div>
 
