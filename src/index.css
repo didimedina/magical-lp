@@ -19,3 +19,15 @@ code {
 /* .container {
   @apply max-w-2xl
 } */
+
+.EVENT-CONTAINER {
+  @apply w-full my-1 rounded-md
+}
+
+.GAP-CONTAINER {
+  @apply w-full my-1 rounded-md
+}
+
+.EVENT-TITLE {
+  @apply overflow-ellipsis px-2  py-2 leading-tight text-lg text-white
+}

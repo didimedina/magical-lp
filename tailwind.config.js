@@ -6,6 +6,14 @@ module.exports = {
       backgroundImage: theme => ({
         'logo': "url('/src/assets/magical-logo.svg')",
       }),
+      colors: {
+        'cal-orange': 'rgba(241, 130, 49, 1);',
+        'cal-blue': '#2E40C6',
+        'cal-yellow': '#F9B912',
+        'cal-purple': '#7908A3',
+        'cal-green': '#2FAD5F',
+        'cal-red': '#CD0303',
+      },
       height: {
         '80vh': '80vh',
         '100vh': '100vh',
@@ -26,7 +34,8 @@ module.exports = {
         '9/10': '90%',
       },
       width: {
-        '100vw': '100vw'
+        '100vw': '100vw',
+        '11/10': '110%'
       },
       inset: {
         '6/10': '60%'
@@ -38,7 +47,8 @@ module.exports = {
         'line': '1px'
       },
       margin: {
-        '10vh': '10vh'
+        '10vh': '10vh',
+        '-1/20': '-5%'
       }
     },
   },
