@@ -17,7 +17,7 @@ const LadningPage = () => {
             start: "top top",
             end: "+=400% bottom",
             pin: true,
-            markers: true,
+            // markers: true,
             id: "hero-pin"
         }})
         .to(".HERO-COPY-CONTAINER", {scale: 0.4, duration: 1, opacity: 0}) // hide heading
@@ -43,7 +43,7 @@ const LadningPage = () => {
             scrub: 1,
             start: "top +=120%",
             end: "+=50%",
-            markers: true,
+            // markers: true,
             id: "hero-to-comp-pin",
         }})
         .to(".GAP-STEP-2", {transformOrigin: "bottom", scale: 30, duration: 1}, ">") // hold second message then zoom
@@ -57,7 +57,7 @@ const LadningPage = () => {
             start: "top top",
             end: "+=200%",
             pin: true,
-            markers: true,
+            // markers: true,
             id: "comp-pin",
         }})
         .set([".CAL-BROKEN-HEADING-2", ".COMP-LOGOS-CONTAINER"], {visibility: "hidden"})
