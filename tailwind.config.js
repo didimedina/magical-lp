@@ -37,6 +37,9 @@ module.exports = {
         '8/10': '80%',
         '9/10': '90%',
       },
+      minHeight: {
+        '80vh': '80vh'
+      },
       width: {
         '100vw': '100vw',
         '11/10': '110%'
@@ -53,6 +56,10 @@ module.exports = {
       margin: {
         '10vh': '10vh',
         '-1/20': '-5%'
+      },
+      fontSize: {
+        '12vw': '12vw',
+        '10xl': '10rem'
       }
     },
   },

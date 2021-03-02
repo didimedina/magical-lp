@@ -67,6 +67,8 @@ const LadningPage = () => {
         .from([".CAL-BROKEN-HEADING-2", ".COMP-LOGOS-CONTAINER"], {scale: 0.8, y: "+=20vh", opacity: 0, duration: 1}, "<")
         .to({}, {duration: 1})
 
+        // todo make the bg of the cal turn black with the bg of the next section to make it lfeel more fluid and not have a white gap
+
 
     });
 
@@ -172,7 +174,7 @@ const LadningPage = () => {
         <div className="COMP-SECTION h-100vh flex flex-col items-center w-full bg-black">
             <div className="COMP-CONTAINER max-w-7xl w-10/12 h-full flex flex-col justify-center items-center">
                 <div className="COMP-HEADING-WRAPPER relative w-full h-36 flex justify-center items-center">
-                    <div className="CAL-BROKEN-HEADING-1 absolute top-0 text-6xl text-center text-white">Calendar is broken.</div>
+                    <div className="CAL-BROKEN-HEADING-1 absolute top-0 text-8xl text-center text-white">Calendar is broken.</div>
                     <div className="CAL-BROKEN-HEADING-2 absolute top-0 text-6xl text-center text-white">...many have tried to fix it.</div>
                 </div>
                 <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-3 grid-rows-3 gap-8">
@@ -188,12 +190,33 @@ const LadningPage = () => {
         <div className="PROD-SECTION flex flex-col items-center w-full bg-gray-100">
             <div className="PROD-HEADING-CONTAINER mt-36 w-10/12 max-w-3xl">
                 <div className="PROD-HEADING text-6xl text-center text-black">Magical is here to fix it.</div>
-                <div className="PROD-SUB-HEADING text-3xl mt-4 text-center text-black">A new calendar, reimagined from the ground up, to help busy people take back control of their time.</div>
+                <div className="PROD-SUB-HEADING text-3xl mt-6 text-center text-black">A new calendar, reimagined from the ground up, to help busy people take back control of their time.</div>
             </div>
             <div className="PROD-IMG max-w-7xl w-full h-60vh  mx-auto bg-bottom bg-contain bg-no-repeat bg-product-img-lg"></div>
         </div>
-        <div className="FOOTER-SECTION flex flex-col items-center h-80vh w-full bg-white"></div>
-
+        <div className="FOOTER-SECTION relative flex flex-col justify-center items-center h-80vh w-full bg-white">
+            <div className="SUBSCRIBE-CONTAINER w-auto flex flex-col items-center -mt-20">
+                <div className="SUBSCRIBE-HEADING text-10xl text-gray-100 -mb-16">Coming Soon.</div>
+                <div className="SUBSCRIBE-SUB-HEADING text-6xl mb-10 text-black">Sign up for early access.</div>
+                <div className="SUBSCRIBE-INPUT-CONTAINER grid grid-cols-4 rounded-md max-w-xl mx-10 w-full p-4 border border-gray-200 focus-within:ring-black focus-within:shadow-md focus-within:border-transparent focus-within:ring-2">
+                    <input className="SUBSCRIBE-INPUT placeholder-gray-200 pl-2 col-span-3 focus:outline-none text-3xl" placeholder="hey@email.com"/>
+                    <button className="SUBMIT-BUTTON col-span-1 bg-black text-white text-xl py-4 rounded-md focus:outline-none">Submit</button>
+                </div>
+            </div>
+            <div className="FOOTER-LINKS-CONTAINER absolute bottom-0 flex flex-col items-center w-full mb-10 mx-10">
+                <div className="LINKS-CONTAINER flex">
+                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Blog</div>
+                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Privacy Policy</div>
+                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Media Kit</div>
+                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Careers</div>
+                </div>
+                <div className="SOCIAL-LINKS-CONTAINER flex mt-6">
+                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
+                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
+                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
