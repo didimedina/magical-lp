@@ -49,6 +49,12 @@ module.exports = {
       },
       gridTemplateRows: {
         'cal': 'auto 1fr',
+        '40':'repeat(40, 1fr)'
+      },
+      gridRow: {
+        'span-8': 'span 8 / span 8',
+        'span-7': 'span 7 / span 7',
+        'span-12': 'span 12 / span 12',
       },
       spacing: {
         'line': '1px'

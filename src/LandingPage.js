@@ -1,6 +1,10 @@
 import React from 'react';
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import Wednesday from './components/Wednesday';
+import Sunday from './components/Sunday';
+import Monday from './components/Monday';
+import Tuesday from './components/Tuesday';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -89,62 +93,29 @@ const LadningPage = () => {
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Thur</div>
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Fri</div>
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Sat</div>
-                <div className="CAL-DAY-BG-CONTAINER flex flex-col justify-center bg-white"></div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center"></div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center"></div>
                 
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
-                    <div className="DAY-EVENTS-CONTAINER relative h-80vh mx-1">
-                        <div className="POINTER absolute z-20 top-0 h-0.5 w-11/10 -ml-1/20 bg-gray-800"></div>
-                        
-                        <div className="EVENT-CONTAINER bg-transparent h-15min"></div>
-                        
-                        <div className="EVENT-CONTAINER bg-cal-blue my-1 h-30min">
-                            <div className="EVENT-TITLE">💭 Stand Up</div>
-                        </div>
-                        
-                        <div className="EVENT-CONTAINER bg-cal-green h-3/10">
-                            <div className="EVENT-TITLE">👨🏻‍💻  Prep for Board Meeting</div>
-                        </div>
-                        
-                        <div className="EVENT-CONTAINER bg-cal-blue  h-1hour">
-                            <div className="EVENT-TITLE">👨🏼‍🎨 Design Review with Eng</div>
-                        </div>
-
-                        <div className="GAP-CONTAINER relative z-10 overflow-hidden bg-gray-200 h-15min">
-                            <div className="GAP-FILL w-full h-full bg-cal-red"></div>
-                        </div>
-
-                        <div className="EVENT-CONTAINER bg-cal-red truncate h-1hour">
-                            <div className="EVENT-TITLE">📥 Inbox Zero</div>
-                        </div>
-                    
-                        <div className="EVENT-CONTAINER bg-cal-blue truncate h-30min">
-                            <div className="EVENT-TITLE">John + Mary: OKRs Sync</div>
-                        </div>
-                    
-                        <div className="EVENT-CONTAINER bg-cal-blue truncate h-30min">
-                            <div className="EVENT-TITLE">John + Tommy: Monthly</div>
-                        </div>
-                        
-                        <div className="EVENT-CONTAINER bg-cal-yellow truncate h-30min">
-                            <div className="EVENT-TITLE">Pick up kids from school</div>
-                        </div>
- 
-                        <div className="EVENT-CONTAINER bg-cal-green h-1hour">
-                            <div className="EVENT-TITLE">Deep Work Buffer</div>
-                        </div>  
-                         
-                        <div className="EVENT-CONTAINER bg-cal-red truncate h-30min">
-                            <div className="EVENT-TITLE">Wrap Up Day</div>
-                        </div>                                            
-                    
-                    </div>
+                    <Sunday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Monday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Tuesday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Wednesday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Wednesday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Wednesday />
+                </div>
+                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                    <Wednesday />
                 </div>
                 
-                <div className="CAL-DAY-BG-CONTAINER bg-white"></div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white"></div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white"></div>
 
 
             </div>
