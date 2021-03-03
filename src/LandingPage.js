@@ -85,19 +85,19 @@ const LadningPage = () => {
                 <div className="HERO-HEADING text-6xl leading-tight text-center">It’s time to talk about your calendar...</div>
             </div>
             
-            <div className="CAL-CONTAINER absolute top-6/10 grid grid-cols-7 grid-rows-cal gap-line bg-gray-200 z-20 w-10/12 max-w-7xl border-offset ring-1 ring-gray-200 h-120vh">
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Sun</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Mon</div>
+            <div className="CAL-CONTAINER absolute top-6/10 grid lg:grid-cols-7 sm:grid-cols-5 grid-cols-3 grid-rows-cal gap-line bg-gray-200 z-20 w-10/12 max-w-7xl border-offset ring-1 ring-gray-200 h-120vh">
+                <div className="CAL-DAY-HEADING hidden lg:block bg-white text-2xl text-gray-300 py-4 pl-3">Sun</div>
+                <div className="CAL-DAY-HEADING hidden sm:block bg-white text-2xl text-gray-300 py-4 pl-3">Mon</div>
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Tues</div>
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Wed</div>
                 <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Thur</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Fri</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Sat</div>
+                <div className="CAL-DAY-HEADING hidden sm:block bg-white text-2xl text-gray-300 py-4 pl-3">Fri</div>
+                <div className="CAL-DAY-HEADING hidden lg:block bg-white text-2xl text-gray-300 py-4 pl-3">Sat</div>
                 
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                <div className="CAL-DAY-BG-CONTAINER hidden bg-white lg:flex flex-col justify-center">
                     <Sunday />
                 </div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                <div className="CAL-DAY-BG-CONTAINER hidden bg-white sm:flex flex-col justify-center">
                     <Monday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
@@ -109,10 +109,10 @@ const LadningPage = () => {
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
                     <Monday />
                 </div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                <div className="CAL-DAY-BG-CONTAINER hidden bg-white sm:flex flex-col justify-center">
                     <Tuesday />
                 </div>
-                <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
+                <div className="CAL-DAY-BG-CONTAINER hidden bg-white lg:flex flex-col justify-center">
                     <Sunday />
                 </div>
                 
