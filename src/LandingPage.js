@@ -107,13 +107,13 @@ const LadningPage = () => {
                     <Wednesday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
-                    <Wednesday />
+                    <Monday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
-                    <Wednesday />
+                    <Tuesday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
-                    <Wednesday />
+                    <Sunday />
                 </div>
                 
 
@@ -182,9 +182,9 @@ const LadningPage = () => {
                     <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Careers</div>
                 </div>
                 <div className="SOCIAL-LINKS-CONTAINER flex mt-6">
-                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
-                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
-                    <div className="SOCIAL-LINK border-2 rounded-lg border-gray-700 h-4 w-4 mx-4"></div>
+                    <div className="SOCIAL-LINK bg-linkedin h-6 w-6 mx-4  opacity-10 hover:opacity-30"></div>
+                    <div className="SOCIAL-LINK bg-twitter h-6 w-6 mx-4  opacity-10 hover:opacity-30"></div>
+                    <div className="SOCIAL-LINK bg-facebook h-6 w-6 mx-4  opacity-10 hover:opacity-30"></div>
                 </div>
             </div>
         </div>

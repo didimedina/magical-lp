@@ -7,6 +7,9 @@ module.exports = {
         'logo': "url('/src/assets/magical-logo.svg')",
         'product-img-lg': "url('../src/assets/product-img-lg.jpg')",
         'product-img-sm': "url('../src/assets/product-img-sm.jpg')",
+        'facebook': "url('../src/assets/facebook.svg')",
+        'twitter': "url('../src/assets/twitter.svg')",
+        'linkedin': "url('../src/assets/linkedin.svg')",
       }),
       colors: {
         'cal-orange': 'rgba(241, 130, 49, 1);',
