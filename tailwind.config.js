@@ -10,6 +10,12 @@ module.exports = {
         'facebook': "url('../src/assets/facebook.svg')",
         'twitter': "url('../src/assets/twitter.svg')",
         'linkedin': "url('../src/assets/linkedin.svg')",
+        'calendly-logo': "url('../src/assets/calendly_logo.svg')",
+        'doodle-logo': "url('../src/assets/doodle_logo.svg')",
+        'fellow-logo': "url('../src/assets/fellow_logo.svg')",
+        'clockwise-logo': "url('../src/assets/clockwise_logo.svg')",
+        'rescuetime-logo': "url('../src/assets/rescuetime_logo.svg')",
+        'woven-logo': "url('../src/assets/woven_logo.svg')",
       }),
       colors: {
         'cal-orange': 'rgba(241, 130, 49, 1);',
