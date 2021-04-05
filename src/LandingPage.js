@@ -133,7 +133,7 @@ const LadningPage = () => {
             <div className="GAP-STEPS-CONTAINER absolute grid grid-col-1 grid-row-1 justify-center items-center invisible h-auto z-40 w-full bottom-0">
                 
                 <div className="GAP-STEP-1 relative z-10 col-start-1 -col-end-1 row-start-1 -row-end-1 h-20 my-16 w-auto px-10 flex flex-col justify-center items-center justify-items-stretch bg-black shadow-2xl rounded-md">
-                    <div className="GAP-STEP-TITLE text-2xl text-white">Downtime?!</div>
+                    <div className="GAP-STEP-TITLE text-2xl text-white">Me time?!</div>
                     <div className="GAP-STEP-SUB-TITLE text-lg text-gray-500">1-1:15pm</div>
                 </div>
                 
