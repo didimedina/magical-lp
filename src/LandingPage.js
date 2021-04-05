@@ -149,7 +149,7 @@ const LadningPage = () => {
             <div className="COMP-CONTAINER max-w-7xl w-10/12 h-full flex flex-col justify-center items-center">
                 <div className="COMP-HEADING-WRAPPER relative w-full h-36 flex justify-center items-center">
                     <div className="CAL-BROKEN-HEADING-1 absolute top-0 text-8xl text-center text-white">Calendar is broken.</div>
-                    <div className="CAL-BROKEN-HEADING-2 absolute top-0 text-6xl text-center text-white">...many have tried to fix it.</div>
+                    <div className="CAL-BROKEN-HEADING-2 absolute top-0 text-6xl text-center text-white">...many have tried to improve it.</div>
                 </div>
                 <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-10">
                     <div className="LOGO-WRAPPER bg-calendly-logo bg-contain bg-no-repeat h-14 bg-center"></div>
