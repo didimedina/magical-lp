@@ -4,7 +4,10 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Wednesday from './components/Wednesday';
 import Sunday from './components/Sunday';
 import Monday from './components/Monday';
+import Thursday from './components/Thursday';
 import Tuesday from './components/Tuesday';
+import Friday from './components/Friday';
+import Saturday from './components/Saturday';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -82,15 +85,15 @@ const LadningPage = () => {
             
             <div className="HERO-COPY-CONTAINER flex flex-col justify-center self-center max-w-2xl h-6/10 z-10 mx-16">
                 <div className="HERO-LOGO mx-auto h-8 w-8 mb-10 bg-logo bg-cover bg-no-repeat"></div>
-                <div className="HERO-HEADING text-6xl leading-tight text-center">It’s time to talk about your calendar...</div>
+                <div className="HERO-HEADING text-5xl md:text-6xl leading-tight text-center">It’s time to talk about your calendar...</div>
             </div> 
             
             <div className="CAL-CONTAINER absolute top-6/10 grid lg:grid-cols-7 sm:grid-cols-5 grid-cols-3 grid-rows-cal gap-line bg-gray-200 z-20 w-10/12 max-w-7xl border-offset ring-1 ring-gray-200 h-120vh">
                 <div className="CAL-DAY-HEADING hidden lg:block bg-white text-2xl text-gray-300 py-4 pl-3">Sun</div>
                 <div className="CAL-DAY-HEADING hidden sm:block bg-white text-2xl text-gray-300 py-4 pl-3">Mon</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Tues</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Wed</div>
-                <div className="CAL-DAY-HEADING bg-white text-2xl text-gray-300 py-4 pl-3">Thur</div>
+                <div className="CAL-DAY-HEADING bg-white text-xl md:text-2xl text-gray-300 py-4 pl-3">Tues</div>
+                <div className="CAL-DAY-HEADING bg-white text-xl md:text-2xl text-gray-300 py-4 pl-3">Wed</div>
+                <div className="CAL-DAY-HEADING bg-white text-xl md:text-2xl text-gray-300 py-4 pl-3">Thur</div>
                 <div className="CAL-DAY-HEADING hidden sm:block bg-white text-2xl text-gray-300 py-4 pl-3">Fri</div>
                 <div className="CAL-DAY-HEADING hidden lg:block bg-white text-2xl text-gray-300 py-4 pl-3">Sat</div>
                 
@@ -107,13 +110,13 @@ const LadningPage = () => {
                     <Wednesday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER bg-white flex flex-col justify-center">
-                    <Monday />
+                    <Thursday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER hidden bg-white sm:flex flex-col justify-center">
-                    <Tuesday />
+                    <Friday />
                 </div>
                 <div className="CAL-DAY-BG-CONTAINER hidden bg-white lg:flex flex-col justify-center">
-                    <Sunday />
+                    <Saturday />
                 </div>
                 
 
@@ -148,13 +151,13 @@ const LadningPage = () => {
                     <div className="CAL-BROKEN-HEADING-1 absolute top-0 text-8xl text-center text-white">Calendar is broken.</div>
                     <div className="CAL-BROKEN-HEADING-2 absolute top-0 text-6xl text-center text-white">...many have tried to fix it.</div>
                 </div>
-                <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-3 grid-rows-2 gap-12">
-                    <div className="LOGO-WRAPPER bg-calendly-logo bg-contain bg-no-repeat h-24 bg-center"></div>
-                    <div className="LOGO-WRAPPER bg-fellow-logo bg-contain bg-no-repeat h-24 bg-center"></div>
-                    <div className="LOGO-WRAPPER bg-clockwise-logo bg-contain bg-no-repeat h-24 bg-center"></div>
-                    <div className="LOGO-WRAPPER bg-doodle-logo bg-contain bg-no-repeat h-24 bg-center"></div>
-                    <div className="LOGO-WRAPPER bg-rescuetime-logo bg-contain bg-no-repeat h-24 bg-center"></div>
-                    <div className="LOGO-WRAPPER bg-woven-logo bg-contain bg-no-repeat h-24 bg-center"></div>
+                <div className="COMP-LOGOS-CONTAINER w-full grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-10">
+                    <div className="LOGO-WRAPPER bg-calendly-logo bg-contain bg-no-repeat h-14 bg-center"></div>
+                    <div className="LOGO-WRAPPER bg-fellow-logo bg-contain bg-no-repeat h-14 bg-center"></div>
+                    <div className="LOGO-WRAPPER bg-clockwise-logo bg-contain bg-no-repeat h-14 bg-center"></div>
+                    <div className="LOGO-WRAPPER bg-doodle-logo bg-contain bg-no-repeat h-14 bg-center"></div>
+                    <div className="LOGO-WRAPPER bg-rescuetime-logo bg-contain bg-no-repeat h-14 bg-center"></div>
+                    <div className="LOGO-WRAPPER bg-woven-logo bg-contain bg-no-repeat h-14 bg-center"></div>
                 </div>
             </div>
         </div>
@@ -163,23 +166,23 @@ const LadningPage = () => {
                 <div className="PROD-HEADING text-6xl text-center text-black">Magical is here to fix it.</div>
                 <div className="PROD-SUB-HEADING text-3xl mt-6 text-center text-black">A new calendar, reimagined from the ground up, to help busy people take back control of their time.</div>
             </div>
-            <div className="PROD-IMG max-w-7xl w-full h-60vh mx-auto bg-bottom bg-contain bg-no-repeat bg-product-img-lg"></div>
+            <div className="PROD-IMG max-w-7xl w-full h-50vh md:h-60vh bg-bottom bg-cover bg-no-repeat bg-product-img-lg"></div>
         </div>
         <div className="FOOTER-SECTION relative flex flex-col justify-center items-center h-80vh w-full bg-white">
-            <div className="SUBSCRIBE-CONTAINER w-auto flex flex-col items-center -mt-20">
-                <div className="SUBSCRIBE-HEADING text-10xl text-gray-100 -mb-16">Coming Soon.</div>
-                <div className="SUBSCRIBE-SUB-HEADING text-6xl mb-10 text-black">Sign up for early access.</div>
-                <div className="SUBSCRIBE-INPUT-CONTAINER grid grid-cols-4 rounded-md max-w-xl mx-10 w-full p-4 border border-gray-200 focus-within:ring-black focus-within:shadow-md focus-within:border-transparent focus-within:ring-2">
-                    <input className="SUBSCRIBE-INPUT placeholder-gray-200 pl-2 col-span-3 focus:outline-none text-3xl" placeholder="hey@email.com"/>
-                    <button className="SUBMIT-BUTTON col-span-1 bg-black text-white text-xl py-3 rounded-md focus:outline-none">Submit</button>
+            <div className="SUBSCRIBE-CONTAINER w-auto flex flex-col items-center -mt-20 mx-10">
+                <div className="SUBSCRIBE-HEADING text-12vw lg:text-9xl text-gray-100 -mb-8 md:-mb-12">Coming Soon.</div>
+                <div className="SUBSCRIBE-SUB-HEADING text-4xl md:text-6xl mb-10 text-black">Sign up for early access.</div>
+                <div className="SUBSCRIBE-INPUT-CONTAINER grid grid-cols-4 rounded-md max-w-xl mx-10 w-full p-2 md:p-4 border border-gray-200 focus-within:ring-black focus-within:shadow-md focus-within:border-transparent focus-within:ring-2">
+                    <input className="SUBSCRIBE-INPUT placeholder-gray-200 pl-2 col-span-3 focus:outline-none text-xl md:text-3xl" placeholder="hey@email.com"/>
+                    <button className="SUBMIT-BUTTON col-span-1 bg-black text-white text-md md:text-xl py-2 md:py-3 rounded-md focus:outline-none">Submit</button>
                 </div>
             </div>
             <div className="FOOTER-LINKS-CONTAINER absolute bottom-0 flex flex-col items-center w-full mb-10 mx-10">
                 <div className="LINKS-CONTAINER flex">
-                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Blog</div>
-                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Privacy Policy</div>
-                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Media Kit</div>
-                    <div className="LINK text-center text-gray-600 border-b-2 border-gray-100 mx-4 pb-0.5">Careers</div>
+                    <button href="#" className="LINK text-center text-gray-600 hover:text-gray-700 border-b-2 border-gray-100 hover:border-gray-200 mx-4 pb-0.5">Blog</button>
+                    <button href="#" className="LINK text-center text-gray-600 hover:text-gray-700 border-b-2 border-gray-100 hover:border-gray-200 mx-4 pb-0.5">Privacy Policy</button>
+                    <button href="#" className="LINK text-center text-gray-600 hover:text-gray-700 border-b-2 border-gray-100 hover:border-gray-200 mx-4 pb-0.5">Media Kit</button>
+                    <button href="#" className="LINK text-center text-gray-600 hover:text-gray-700 border-b-2 border-gray-100 hover:border-gray-200 mx-4 pb-0.5">Careers</button>
                 </div>
                 <div className="SOCIAL-LINKS-CONTAINER flex mt-6">
                     <div className="SOCIAL-LINK bg-linkedin h-6 w-6 mx-4  opacity-10 hover:opacity-30"></div>

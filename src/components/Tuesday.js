@@ -10,7 +10,7 @@ const Tuesday = () => {
             </div>
 
             <div className="EVENT-CONTAINER bg-cal-yellow row-span-2">
-                <div className="EVENT-TITLE">Stand Up</div>
+                <div className="EVENT-TITLE">💭 Stand Up</div>
             </div>  
             
             <div className="EVENT-CONTAINER bg-cal-yellow row-span-2">

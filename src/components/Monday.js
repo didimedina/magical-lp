@@ -11,11 +11,11 @@ const Monday = () => {
             </div>
             
             <div className="EVENT-CONTAINER bg-gray-800 row-span-2">
-                <div className="EVENT-TITLE">⛩ Buffer Time</div>
-            </div>
+                <div className="EVENT-TITLE">🚌 Commute</div>
+            </div>   
 
             <div className="EVENT-CONTAINER bg-cal-yellow row-span-2">
-                <div className="EVENT-TITLE">Stand Up</div>
+                <div className="EVENT-TITLE">💭 Stand Up</div>
             </div>           
 
             <div className="EVENT-CONTAINER bg-cal-blue row-span-4">
@@ -46,8 +46,8 @@ const Monday = () => {
                 <div className="EVENT-TITLE">👨🏻‍💻 Investor Deck</div>
             </div>                         
 
-            <div className="EVENT-CONTAINER bg-gray-800 row-span-3">
-                <div className="EVENT-TITLE">🚌 Commute home</div>
+            <div className="EVENT-CONTAINER bg-gray-800 row-span-2">
+                <div className="EVENT-TITLE">🚌 Commute</div>
             </div>            
                                           
         
